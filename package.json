@@ -1,0 +1,30 @@
+{
+    "name": "kahani-firebase",
+    "version": "0.0.0",
+    "config": {
+        "env": "dev",
+        "only": {
+            "base": "storage,firestore:rules,firestore:indexes",
+            "hosting": "hosting",
+            "storage": "storage",
+            "firestore": "firestore",
+            "indexes": "firestore:indexes",
+            "functions": "functions",
+            "rules": "storage,firestore:rules",
+            "new": "functions:function1,functions:function2"
+        }
+    },
+    "scripts": {
+        "firebase": "firebase use $npm_package_config_env",
+        "start": "firebase serve",
+        "start-functions": "firebase serve --only functions",
+        "build": "ng build",
+        "deploy": "npm run firebase && firebase deploy --only $npm_package_config_only_base",
+        "deployF": "npm run firebase && firebase deploy --only $npm_package_config_only_firestore",
+        "deployS": "npm run firebase && firebase deploy --only $npm_package_config_only_storage",
+        "deployI": "npm run firebase && firebase deploy --only $npm_package_config_only_indexes",
+        "deployR": "npm run firebase && firebase deploy --only $npm_package_config_only_rules",
+        "deployN": "npm run firebase && firebase deploy --only $npm_package_config_only_new"
+    },
+    "private": true
+}
