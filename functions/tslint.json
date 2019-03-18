@@ -1,4 +1,9 @@
 {
+    "linterOptions": {
+        "exclude": [
+            "node_modules/**"
+        ]
+    },
   "rules": {
     // -- Strict errors --
     // These lint rules are likely always a good idea.

@@ -1,6 +1,7 @@
 {
   "projects": {
     "prod": "kahani-tech",
-    "dev": "kahani-dev"
+    "dev": "kahani-dev",
+    "default": "kahani-dev"
   }
 }
